@@ -5,7 +5,7 @@
   "authors": ["Tom Tsiliopoulos"],
   "license": "ISC",
   "keywords": ["NodeJS", "ExpressJS", "EJS"],
-  "homepage": "",
+
   "ignore": [
     "**/.*",
     "node_modules",
