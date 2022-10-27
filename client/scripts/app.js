@@ -1,34 +1,28 @@
 //IIFE
-(function()
-{
+(function () {
+  function Start() {
+    console.log('App Started!');
 
-    function Start()
-    {
-        console.log("App Started!");
+    // use AJAX to read JSON file
 
-        // use AJAX to read JSON file
+    // Step 1: Create a new XHR object
+    let XHR = new XMLHttpRequest();
 
-        // Step 1: Create a new XHR object
-        let XHR = new XMLHttpRequest();
+    // Step 2: Create the request
+    XHR.open('GET', '../data/data.json');
 
-        // Step 2: Create the request
-        XHR.open("GET", "../data/data.json");
+    // Step 3: Send the request
+    XHR.send();
 
-        // Step 3: Send the request
-        XHR.send();
+    // Step 4: create an event listener/handler
+    XHR.addEventListener('readystatechange', function () {
+      if (XHR.readyState == 4 && XHR.status == 200) {
+        console.log('JSON Data:');
+        console.log('===========');
+        console.log(XHR.responseText);
+      }
+    });
+  }
 
-        // Step 4: create an event listener/handler
-        XHR.addEventListener("readystatechange", function()
-        {
-            if(XHR.readyState == 4 && XHR.status == 200)
-            {
-                console.log("JSON Data:");
-                console.log("===========");
-                console.log(XHR.responseText);
-            }
-        });
-    }
-
-    window.addEventListener("load", Start);
-
+  window.addEventListener('load', Start);
 })();

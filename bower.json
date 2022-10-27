@@ -2,15 +2,9 @@
   "name": "comp308-w2017-midterm",
   "description": "## Welcome to the MidTerm Project - the Favourite Book List App",
   "main": "server.js",
-  "authors": [
-    "Tom Tsiliopoulos"
-  ],
+  "authors": ["Tom Tsiliopoulos"],
   "license": "ISC",
-  "keywords": [
-    "NodeJS",
-    "ExpressJS",
-    "EJS"
-  ],
+  "keywords": ["NodeJS", "ExpressJS", "EJS"],
   "homepage": "",
   "ignore": [
     "**/.*",
